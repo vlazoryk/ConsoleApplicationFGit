@@ -2,10 +2,31 @@
 //
 
 #include <iostream>
+#include <string>
+
+using namespace std;
+string ToStringBin(long i)
+{
+    string ret ="";
+    int h = 1;
+    while (i != 0)
+    {
+        h =  i%2;
+        i /= 2;
+        if (h) ret = '1' + ret;
+        else ret = '0' + ret;
+    }
+     
+    return ret;
+
+}
 
 int main()
 {
+
     std::cout << "Hello Git!\n";
+    cout << ToStringBin(9279)<<endl;
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
